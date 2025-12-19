@@ -1,22 +1,13 @@
 /* ===== Scroll Reveal Animation ===== */
-// Fix auto-scroll on page load
 window.onload = () => {
   window.scrollTo(0, 0);
 };
-// Remove hash from URL after load
+
 if (window.location.hash) {
   history.replaceState(null, null, window.location.pathname);
 }
 
 window.addEventListener("scroll", reveal);
-function downloadResume() {
-  const link = document.createElement("a");
-  link.href = "sneha_resume.pdf";
-  link.download = "sneha_resume.pdf";
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-}
 
 function reveal() {
   const reveals = document.querySelectorAll(".reveal");
@@ -65,12 +56,12 @@ function eraseText() {
 }
 
 document.addEventListener("DOMContentLoaded", typeText);
-// More About Me Accordion
+
+/* ===== Accordion ===== */
 document.querySelectorAll(".accordion-header").forEach(header => {
   header.addEventListener("click", () => {
     const item = header.parentElement;
 
-    // Close other sections (optional behavior)
     document.querySelectorAll(".accordion-item").forEach(i => {
       if (i !== item) i.classList.remove("active");
     });
