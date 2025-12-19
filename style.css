@@ -685,3 +685,56 @@ section h2 {
     font-size: 0.95rem;
   }
 }
+/* =========================
+   PROJECT TITLE BELOW CARD
+   ========================= */
+
+.project-item {
+  text-decoration: none;
+}
+
+.project-title {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-main);
+  letter-spacing: 0.3px;
+}
+
+/* Mobile fine-tune (same look) */
+@media (max-width: 768px) {
+  .project-title {
+    font-size: 1rem;
+  }
+}
+/* =========================
+   REMOVE LINK UNDERLINE COMPLETELY
+   ========================= */
+
+/* Remove underline & color from project links */
+.project-item,
+.project-item * {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+/* Safety for visited links */
+.project-item:visited,
+.project-item:visited * {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+/* =========================
+   FINAL LINK FIX (REQUIRED)
+   ========================= */
+
+.project-item {
+  display: block;              /* 🔥 MOST IMPORTANT */
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.project-item * {
+  text-decoration: none !important;
+}
