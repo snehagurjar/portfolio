@@ -25,8 +25,10 @@ function reveal() {
 
 /* ===== Typing Effect ===== */
 const textArray = [
-  "AIML-focused Python Developer",
-  "Generative AI Enthusiast"
+  "Aspiring AI Engineer",
+  "Python Developer",
+  "Machine Learning Enthusiast",
+  "Generative AI Builder"
 ];
 
 let typingIndex = 0;
